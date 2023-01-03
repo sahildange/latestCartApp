@@ -1,0 +1,31 @@
+[
+    {
+      "itemName": "Dress",
+      "price": "100"
+      
+    },
+    {
+      "itemName": "Headphones",
+      "price": "200"
+      
+    },
+    {
+      "itemName": "Mobile",
+      "price": "800"
+    },
+    {
+      "itemName": "Laptop",
+      "price": "400"
+    },
+    {
+      "itemName": "Charger",
+      "price": "250"
+    },
+    {
+      "itemName": "Mouse",
+      "price": "150"
+    }
+
+  ]
+
+  

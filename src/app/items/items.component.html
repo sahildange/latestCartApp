@@ -1,0 +1,57 @@
+
+<div class="mt-5">
+  
+    <div>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Total Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr [formGroup]="tableGroup">
+                        <td></td>
+                        <td>
+                            <mat-form-field>
+                                <input matInput type="text" placeholder="Item Name" formControlName="item">
+                            </mat-form-field>
+                            <span class="validations"
+                                *ngIf="tableGroup.get('item')?.errors?.['required'] && tableGroup.get('item')?.touched">
+                                Item is required </span>
+                        </td>
+                        <td>
+                            <mat-form-field>
+                                <input matInput type="text" placeholder="Quantity" formControlName="count">
+                            </mat-form-field>
+                            <span class="validations"
+                                *ngIf="tableGroup.get('count')?.errors?.['required'] && tableGroup.get('count')?.touched">
+                                Count is required </span>
+                        </td>
+                        <td></td>
+                        <td>
+                            <button mat-raised-button color="primary" (click)="addRow()">
+                                Add Row
+                            </button>
+                        </td>
+                    </tr>
+                    <tr *ngFor="let row of tableDetails; let i = index">
+                        <td>{{(i+1)}}</td>
+                        <td>{{row.item}}</td>
+                        <td>{{row.count}}</td>
+                        <td>{{row.totalPrice| number}}</td>
+                        <td>
+                            <button mat-raised-button color="warn" (click)="deleteRow(i)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <app-summary [section]="section" [count]="summary?.total"
+        [totalPrice]="summary?.totalPrice"></app-summary>
+</div>

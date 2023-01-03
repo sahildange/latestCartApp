@@ -1,0 +1,12 @@
+.example-card{
+    border: solid black;
+    width: 20%;
+    float:right;
+    margin-top: 20px;
+    margin-right: 300px;
+}
+
+.title{
+    font-weight: bold;
+    color:black
+}

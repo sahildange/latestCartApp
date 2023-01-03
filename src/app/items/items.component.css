@@ -1,0 +1,24 @@
+.table{
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 40px;
+    float:left;
+    border: 1px solid black
+}
+
+.example-card{
+    border: 1px solid black;
+    width: 20%;
+    float:right;
+    margin-top: 20px;
+    margin-right: 150px;
+}
+
+.thead, tr, td,th{
+    border: solid black;
+    text-align: center;
+}
+
+.validations{
+    color: red;
+}
